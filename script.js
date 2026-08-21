@@ -1,8 +1,14 @@
-// Dark Mode Toggle
 const themeToggleBtn = document.getElementById('theme-toggle');
+const icon = themeToggleBtn.querySelector('i');
+
+// Dark mode enabled by default
+document.body.classList.add('dark-theme');
+icon.classList.remove('fa-moon');
+icon.classList.add('fa-sun');
+
 themeToggleBtn.addEventListener('click', () => {
     document.body.classList.toggle('dark-theme');
-    const icon = themeToggleBtn.querySelector('i');
+
     if (document.body.classList.contains('dark-theme')) {
         icon.classList.remove('fa-moon');
         icon.classList.add('fa-sun');
